@@ -6,7 +6,6 @@
 body {
     max-height: 100%;
     border-radius: 5%;
-
 }
 
 /*Styling for the controls area here*/
@@ -36,4 +35,37 @@ body {
 .weapon-title {
     text-align: center;
     padding-top: 20px;
+}
+.btn--blue {
+    border-color: lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+}
+
+.btn--red {
+    border-color: lightgreen;
+    background-color: lightgreen;
+}
+
+/*styling for the player can go here*/
+.player{
+    display: flex;
+    justify-content: center; /* horizontally center the child elements */
+    align-items: center; /* vertically center the child elements*/
+    padding-bottom: 20px;
+    border-bottom: 2px black solid;
+    background: lightblue;
+}
+
+.player .myOptions {
+    max-width: 25%;
+    margin: 20px;
+    font-size: 40px;
+    border: 2px black solid;
+    padding: 2px 8px 2px 8px;
+    background-color: white;
+}
+.card-button {
+    font-size: 40px;
+    background-color: white;
+    border: none;
 }

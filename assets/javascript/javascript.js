@@ -2,20 +2,24 @@
 
 //global javascript code 
 document.addEventListener("DOMContentLoaded", function() {
-    let controlButtons = document.getElementsByClassName("control-button")
-
-    for (let conButton of controlButtons) {
-        conButton.addEventListener('click', function() {
-            if (this.getAttribute("data-type") === "higher") {
-                alert(`On a High?`);
-                let gameType = this.getAttribute("data-type");
-                runGame();
-            } else {
-                alert(`Feeling low?`);
-                runGame();
-            }
-        })
-    }
     runGame();
+    let controlButtons = document.getElementsByTagName("control-button");
 
-})
+    for (let contButton of controlButtons) {
+        contButton.addEventListener("click", function()) {
+            if (this.getAttribute("data-type") === "higher") {
+                checkAnswerHigher()
+                alert(`Feeling High?`)
+            } else if (this.getAttribute("data-type") === "lower") {
+                checkAnswerLower()
+            }
+        }
+    }
+}
+
+// randomely renerage some numbers 
+function runGame() {
+    let num1 = Math.floor(Math.random() * 25) +1;
+    let num2 = Math.floor(Math.random() * 25) +1;
+    console.log(num1);
+}
