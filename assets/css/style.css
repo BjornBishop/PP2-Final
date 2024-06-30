@@ -6,3 +6,33 @@
 .game-area {
     text-align: center;
 }
+
+#result-text {
+    height: 250px;
+    vertical-align: middle;
+}
+/* page heading styling goes here*/
+.page-heading {
+    font-family: tahoma;
+}
+/*Player styling goes here*/
+#player-text {
+    background-color: lightblue;
+    padding: 10px;
+    font-size: 30px;
+}
+/*Button styling goes here*/
+.choice-buttons {
+    font-size: 30px;
+    background-color: lightgrey;
+    border: black solid 2px;
+    margin: 10px;
+}
+
+/*Computer player styling goes here*/
+#computer-text {
+    background-color: lightcoral;
+    padding: 10px;
+    font-size: 30px;
+}
+/*Score styling goes here*/

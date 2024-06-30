@@ -4,7 +4,7 @@
 let playerText = document.querySelector("#player-text");
 let computerText = document.querySelector("#computer-text");
 let resultsText = document.querySelector("#result-text");
-let choiceButtons = document.querySelectorAll(".choice-button");
+let choiceButtons = document.querySelectorAll(".choice-buttons");
     
 let player;
 let computer;
@@ -36,6 +36,7 @@ function computerTurn() {
             break;
     }
 }
+
 // check the winner function 
 
 function checkWinner() {
@@ -51,4 +52,9 @@ function checkWinner() {
     else if (computer === "SCISSORS") {
         return (player === "ROCK") ? "You Win" : "You Lose";
     }
+}
+// function to track the score 
+
+function scoreTrack() {
+
 }
