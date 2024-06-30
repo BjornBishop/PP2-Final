@@ -2,24 +2,27 @@
 
 //global javascript code 
 document.addEventListener("DOMContentLoaded", function() {
-    runGame();
-    let controlButtons = document.getElementsByTagName("control-button");
+    let higherButton = document.getElementById("higher-button");
+    let lowerButton = document.getElementById("lower-button");
+    
+    clearBoard();
 
-    for (let contButton of controlButtons) {
-        contButton.addEventListener("click", function()) {
-            if (this.getAttribute("data-type") === "higher") {
-                checkAnswerHigher()
-                alert(`Feeling High?`)
-            } else if (this.getAttribute("data-type") === "lower") {
-                checkAnswerLower()
-            }
-        }
-    }
-}
+    higherButton.addEventListener("click", function() {
+        checkAnswerHigher(num1, num2);
+        alert(`higher button picked`);
+    })
+    lowerButton.addEventListener("click", function() {
+        checkAnswerLower(num1, num2);
+        alert(`lower button picked`);
+    })
 
-// randomely renerage some numbers 
-function runGame() {
-    let num1 = Math.floor(Math.random() * 25) +1;
-    let num2 = Math.floor(Math.random() * 25) +1;
-    console.log(num1);
+})
+// clear the board 
+
+// randomly generate some numbers 
+
+
+// Check if the number is higher 
+function checkAnswerHigher(num1, num2) {
+
 }
