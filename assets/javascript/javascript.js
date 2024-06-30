@@ -17,7 +17,7 @@ choiceButtons.forEach(button => button.addEventListener("click", () => {
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultsText.textContent = checkWinner();
-    trackScore()
+    trackScore(playerWins, computerWins)
 }))
 
 //computer player function 
@@ -41,6 +41,7 @@ function computerTurn() {
 // check the winner function 
 
 function checkWinner() {
+    
     if (player === computer) {
         return "draw"
     } 
@@ -54,18 +55,17 @@ function checkWinner() {
         return (player === "ROCK") ? "You Win" : "You Lose";
     }
 }
-// function to track the score
+
+// function to add points to the player 
 
 function trackScore() {
-    let userAnswer = document.getElementById("result-text");
-    let playerScore = parseInt(document.getElementsByClassName("player-result").innerText);
-    let computerScore = parseInt(document.getElementByClassName("computer-result").innerText);
-
-    if (userAnswer.textContent === "You Win") {
-        document.getElementById("player-score").innerText = ++playerScore;
-    } else if (userAnswer.textContent === "You Lose") {
-        document.getElementById("computer-score").innerText = ++computerScore;
-    } else {
-        
+    if (resultsText.textContent === "You Win") {
+        // Update player score
+        let playerScore = parseInt(document.querySelector("#player-result").innerText);
+        document.querySelector("#player-result").innerText = ++playerScore;
+    } else if (resultsText.textContent === "You Lose") {
+        // Update computer score
+        let computerScore = parseInt(document.querySelector("#computer-result").innerText);
+        document.querySelector("#computer-result").innerText = ++computerScore;
     }
 }
