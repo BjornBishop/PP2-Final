@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 // clear the board 
-
+function clearBoard() {
+    document.getElementById("myOption1").value = 0;
+}
 // randomly generate some numbers 
 
 
