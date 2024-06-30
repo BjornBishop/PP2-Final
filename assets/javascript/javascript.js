@@ -1,30 +1,54 @@
 // Now lets plan out the javascript infrastructure 
 
-//global javascript code 
-document.addEventListener("DOMContentLoaded", function() {
-    let higherButton = document.getElementById("higher-button");
-    let lowerButton = document.getElementById("lower-button");
+// buttons defined
+let playerText = document.querySelector("#player-text");
+let computerText = document.querySelector("#computer-text");
+let resultsText = document.querySelector("#result-text");
+let choiceButtons = document.querySelectorAll(".choice-button");
     
-    clearBoard();
+let player;
+let computer;
+let result;
+//button event listener
+choiceButtons.forEach(button => button.addEventListener("click", () => {
 
-    higherButton.addEventListener("click", function() {
-        checkAnswerHigher(num1, num2);
-        alert(`higher button picked`);
-    })
-    lowerButton.addEventListener("click", function() {
-        checkAnswerLower(num1, num2);
-        alert(`lower button picked`);
-    })
+    player = button.textContent;
+    computerTurn();
+    playerText.textContent = `Player: ${player}`;
+    computerText.textContent = `Computer: ${computer}`;
+    resultsText.textContent = checkWinner();
+}))
 
-})
-// clear the board 
-function clearBoard() {
-    document.getElementById("myOption1").value = 0;
+//computer player function 
+function computerTurn() {
+
+    let randomNumber = Math.floor(Math.random() * 3 ) + 1; 
+
+    switch(randomNumber) {
+        case 1:
+            computer = "ROCK";
+            break;
+        case 2:
+            computer = "PAPER";
+            break;
+        case 3: 
+            computer = "SCISSORS";
+            break;
+    }
 }
-// randomly generate some numbers 
+// check the winner function 
 
-
-// Check if the number is higher 
-function checkAnswerHigher(num1, num2) {
-
+function checkWinner() {
+    if (player === computer) {
+        return "draw"
+    } 
+    else if (computer === "ROCK") {
+        return (player === "PAPER") ? "You Win" : "You Lose";
+    }
+    else if (computer === "PAPER") {
+        return (player === "SCISSORS") ? "You Win" : "You Lose";
+    }
+    else if (computer === "SCISSORS") {
+        return (player === "ROCK") ? "You Win" : "You Lose";
+    }
 }

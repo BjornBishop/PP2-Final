@@ -3,3 +3,6 @@
 /*Any styling required for global elements can go here*/
 
 /*Body styling goes here*/
+.game-area {
+    text-align: center;
+}
