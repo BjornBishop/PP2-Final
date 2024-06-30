@@ -17,6 +17,7 @@ choiceButtons.forEach(button => button.addEventListener("click", () => {
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultsText.textContent = checkWinner();
+    trackScore()
 }))
 
 //computer player function 
@@ -53,8 +54,18 @@ function checkWinner() {
         return (player === "ROCK") ? "You Win" : "You Lose";
     }
 }
-// function to track the score 
+// function to track the score
 
-function scoreTrack() {
+function trackScore() {
+    let userAnswer = document.getElementById("result-text");
+    let playerScore = parseInt(document.getElementsByClassName("player-result").innerText);
+    let computerScore = parseInt(document.getElementByClassName("computer-result").innerText);
 
+    if (userAnswer.textContent === "You Win") {
+        document.getElementById("player-score").innerText = ++playerScore;
+    } else if (userAnswer.textContent === "You Lose") {
+        document.getElementById("computer-score").innerText = ++computerScore;
+    } else {
+        
+    }
 }
