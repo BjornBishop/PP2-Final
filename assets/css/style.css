@@ -21,6 +21,8 @@
 .page-heading {
     font-family: tahoma;
 }
+
+
 /*Player styling goes here*/
 #player-text {
     background-color: lightblue;
@@ -42,3 +44,7 @@
     font-size: 30px;
 }
 /*Score styling goes here*/
+.scores {
+    font-size: 30px;
+    font-family: 'Lucida Sans';
+}

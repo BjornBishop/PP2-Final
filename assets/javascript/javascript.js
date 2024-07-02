@@ -89,10 +89,10 @@ function calculatePercentage() {
     let wonGames = parseInt(document.querySelector("#games-won").innerText);
 
     if (totalGames === 0) {
-        // Handle the case where totalGames is zero (avoid division by zero)
+        // function to prevent the game from freezing due to dividing by 0
         document.querySelector("#percentage").innerText = "not enough games"; 
     } else {
-        let finalPercentage = (wonGames / totalGames) * 100.0; // Use 100.0 to force floating-point division
+        let finalPercentage = (wonGames / totalGames) * 100.0; // Using 100.0 because somehow this makes something work with floating?
         document.querySelector("#percentage").innerText = parseInt(finalPercentage);
     }
 }
