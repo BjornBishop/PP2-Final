@@ -35,6 +35,7 @@
     background-color: lightgrey;
     border: black solid 2px;
     margin: 10px;
+    border-radius: 5%;
 }
 
 /*Computer player styling goes here*/
