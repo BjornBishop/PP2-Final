@@ -34,6 +34,7 @@ eventually option to nest the terminateGame function in the CalculatePercentage 
 
 ## Testing 
  
+ Technically RPS was built with mobile first in mind but due to the simplicity of the overall design, very little was actually required in the way of media queries. 
 
 ### Version 1 
 in my first attempt at this project, i tried to create a rock, paper, scissors, lizard, spock game. Although I was able to create the front end, I was struggling to make the javascript logic work in my favour. I spent several days repeatedly attempting to solve the very beginning of the code, looking at google and forms, asking AI, everything to no avail. So I decided to start fresh. 
@@ -75,11 +76,32 @@ I decided that instead of making something more complicated than necessary and p
     - largest function has 12 statements in it, while the median is 5. 
     - the most complex function is a cyclomatic complexity value of 8 while the median is 3. 
   - there are also a lot of statements regarding using "Let" and that it is outdated. A clear solution couldnt be found to remove those "errors". 
+  - I have ran the code through coPilot a few times as well to ask if there are suggestions for improvement. It seems this can be done counless times and always find slight improvements here and there but overall the AI gods seem to approve of the work done. 
 - HTML
   - when running my HTML through the suggested W3 validator, 1 error appeared regarding an H2 element that was closed with an H1 tag. quick and easy fix. 
 - CSS 
   - when running the CSS through the Jigsaw W3 validator, the CSS code came back with no errors.
 ## Deployment 
 
+- The site was deployed to Github pages. The steps I took to do this were as follows: 
+  - In Github repository, I navigated to settings for project2-Final 
+  - On the "Pages" section - I ensured the source was "deploy from branch" and the branch was set to "main" with "/root" set and saved the settings. 
+  - I navigated back to the code section and refreshed the page. 
+  - on the right side of the page, I selected the "deployment" section where i found the link for my deployed project
+  
+  The live link can be found here: [Project2-Final deployed site]().
+
 ## Credit
 
+This section will show links to sites that guided the development process for RPS. Throughout the development process, a few sites were used to gain inspiration. 
+
+- [font awesome](https://fontawesome.com/search?q=youtube&o=r&m=free) This was originally used for some picutes and fonts however they were removed. 
+- [Code Institute](www.codeinstitute.net) - this site gave a lot of guidance going back through the "love maths" assignment. Although there were some solutions I was trying to impelemnt from CI that didnt seem to work in my favour, overall, a lot of support was found there. 
+- [YouTube BroCode](https://www.youtube.com/watch?v=n1_vHArDBRA) - this was the video that I watched about making a RPS game. 
+- [Youtube](https://www.youtube.com/watch?v=NJuSStkIZBg) - this was used to keep me sane. 
+- [Youtube codeStack+](https://www.youtube.com/watch?v=cve1gYV7jWk) - this explained about getElementById and querySelector. 
+- [Mozilla](https://developer.mozilla.org/en-US/docs/Web/Events) - i guess this helped with bug fixing? 
+- [CoPilot](https://copilot.microsoft.com/) - this was an absolute lifesaver when it comes to running into roadblocks. It was able to explain the complex elements that I couldnt understand by, it helped to guide my train of thoughts with the functions and was able to spot spelling mistakes that broke the entire javascript functions. 10/10. 
+- [Previous work](https://github.com/BjornBishop/Project1-final/blob/main/README.md?plain=1) - Addmittedly I took some inspiration from the PP1 as well. 
+
+Thank you for taking the time go through my assignment. 
