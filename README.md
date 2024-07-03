@@ -89,7 +89,7 @@ I decided that instead of making something more complicated than necessary and p
   - I navigated back to the code section and refreshed the page. 
   - on the right side of the page, I selected the "deployment" section where i found the link for my deployed project
   
-  The live link can be found here: [Project2-Final deployed site]().
+  The live link can be found here: [Project2-Final deployed site](https://bjornbishop.github.io/PP2-Final/).
 
 ## Credit
 
