@@ -8,7 +8,7 @@ let choiceButtons = document.querySelectorAll(".choice-buttons");
     
 let player;
 let computer;
-let result;
+
 //button event listener
 choiceButtons.forEach(button => button.addEventListener("click", () => {
 
@@ -19,7 +19,7 @@ choiceButtons.forEach(button => button.addEventListener("click", () => {
     resultsText.textContent = checkWinner();
     trackScore();
     calculatePercentage();
-}))
+}));
 
 //computer player function 
 function computerTurn() {
@@ -47,7 +47,7 @@ function computerTurn() {
 function checkWinner() {
     
     if (player === computer) {
-        return "draw"
+        return "draw";
     } 
     else if (computer === "ROCK") {
         return (player === "PAPER") ? "You Win" : "You Lose";
@@ -106,8 +106,8 @@ function terminateGame () {
     let playerPlayer = parseInt(document.querySelector("#player-results").innerText);
 
     if (marker === 99) {
-        alert(`Your score is ${marker}!! You have pleased me.`)
-        alert(`Game ends now <3`)
+        alert(`Your score is ${marker}!! You have pleased me.`);
+        alert(`Game ends now <3`);
 
         marker = 0;
         computerPlayer = 0;
