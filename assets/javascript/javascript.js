@@ -24,7 +24,7 @@ choiceButtons.forEach(button => button.addEventListener("click", () => {
 //computer player function 
 function computerTurn() {
 
-    let randomNumber = Math.floor(Math.random() * 3 ) + 1; 
+    let randomNumber = Math.floor(Math.random() * 4 ) + 1; 
 
     switch(randomNumber) {
         case 1:
@@ -34,6 +34,9 @@ function computerTurn() {
             computer = "PAPER";
             break;
         case 3: 
+            computer = "SCISSORS";
+            break;
+        case 4:
             computer = "SCISSORS";
             break;
     }

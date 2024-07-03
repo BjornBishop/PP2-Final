@@ -1,7 +1,20 @@
 /* lets start here with planning the infrastructure */ 
 
-/*Any styling required for global elements can go here*/
+/*media queries*/
+@media screen and (max-width:768px) {
 
+    .choice-buttons {
+        font-size: 10px;
+        background-color: lightgrey;
+        border: black solid 2px;
+        margin: 5px;
+        border-radius: 5%;
+    }
+    
+    .game-text {
+        font-size: 15px;
+    }
+}
 /*Body styling goes here*/
 .game-area {
     text-align: center;
