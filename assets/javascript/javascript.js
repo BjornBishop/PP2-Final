@@ -5,6 +5,7 @@ let playerText = document.querySelector("#player-text");
 let computerText = document.querySelector("#computer-text");
 let resultsText = document.querySelector("#result-text");
 let choiceButtons = document.querySelectorAll(".choice-buttons");
+let resetButton = document.querySelector("#reset-button");
     
 let player;
 let computer;
@@ -20,6 +21,9 @@ choiceButtons.forEach(button => button.addEventListener("click", () => {
     trackScore();
     calculatePercentage();
 }));
+
+resetButton.addEventListener("click", terminateGame);
+
 
 //computer player function 
 function computerTurn() {
@@ -95,22 +99,21 @@ function calculatePercentage() {
         // function to prevent the game from freezing due to dividing by 0
         document.querySelector("#percentage").innerText = "not enough games"; 
     } else {
-        let finalPercentage = (wonGames / totalGames) * 100.0; // Using 100.0 because somehow this makes something work with floating?
+        let finalPercentage = (wonGames / totalGames) * 100.0; // Using 100.0 because after hours of trying every other option, this somehow worked because of a floating integer? 
         document.querySelector("#percentage").innerText = parseInt(finalPercentage);
+    }
+
+    if (totalGames === 100) {
+        terminateGame();
     }
 }
 
 function terminateGame () {
-    let marker = parseInt(document.querySelector("#percentage").innerText);
-    let computerPlayer = parseInt(document.querySelector("#computer-result").innerText);
-    let playerPlayer = parseInt(document.querySelector("#player-results").innerText);
+    document.querySelector("#total-games").innerText = Number("0");
+    document.querySelector("#games-won").innerText = Number("0");
+    document.querySelector("#computer-result").innerText = Number("0");
+    document.querySelector("#player-result").innerText = Number("0");
+    document.querySelector("#percentage").innerText = Number("0");
 
-    if (marker === 99) {
-        alert(`Your score is ${marker}!! You have pleased me.`);
-        alert(`Game ends now <3`);
-
-        marker = 0;
-        computerPlayer = 0;
-        playerPlayer = 0;
-    }
+    terminate = true;
 }
