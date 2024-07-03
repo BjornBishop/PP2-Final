@@ -10,11 +10,11 @@
         margin: 5px;
         border-radius: 5%;
     }
-    
     .game-text {
         font-size: 15px;
     }
 }
+
 /*Body styling goes here*/
 .game-area {
     text-align: center;
@@ -49,6 +49,9 @@
     border: black solid 2px;
     margin: 10px;
     border-radius: 5%;
+}
+.choice-buttons:hover {
+    background-color: aquamarine;
 }
 
 /*Computer player styling goes here*/
