@@ -1,6 +1,10 @@
 // Now lets plan out the javascript infrastructure 
 
 // buttons defined
+/**
+ * This section declairs the constants for DOM elements
+ * that can be used throughout the functions. 
+ */
 let playerText = document.querySelector("#player-text");
 let computerText = document.querySelector("#computer-text");
 let resultsText = document.querySelector("#result-text");
@@ -10,6 +14,9 @@ let resetButton = document.querySelector("#reset-button");
 let player;
 let computer;
 
+/**
+ * This section is where the event listeners live. 
+ */
 //button event listener
 choiceButtons.forEach(button => button.addEventListener("click", () => {
 
@@ -24,7 +31,9 @@ choiceButtons.forEach(button => button.addEventListener("click", () => {
 
 resetButton.addEventListener("click", terminateGame);
 
-
+/**
+ * This function when called calculats the computer players option. 
+ */
 //computer player function 
 function computerTurn() {
 
@@ -46,6 +55,11 @@ function computerTurn() {
     }
 }
 
+/**
+ * This section calculates which statement is posted 
+ * in the results section. 
+ */
+
 // check the winner function 
 
 function checkWinner() {
@@ -64,6 +78,10 @@ function checkWinner() {
     }
 }
 
+/**
+ * This function takes the the results from the check winner funtion 
+ * and tracks the score of both sides.
+ */
 // function to add points to the players
 
 function trackScore() {
@@ -88,6 +106,10 @@ function trackScore() {
     }
 }
 
+/**
+ * This function is some basic maths to calculate the 
+ * winning percentage rate. 
+ */
 // function to calculate the winning percentage 
 
 function calculatePercentage() {
@@ -108,6 +130,10 @@ function calculatePercentage() {
     }
 }
 
+/**
+ * all about terminator. 
+ */
+//Terminate the game 
 function terminateGame () {
     document.querySelector("#total-games").innerText = Number("0");
     document.querySelector("#games-won").innerText = Number("0");
