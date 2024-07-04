@@ -11,13 +11,13 @@
     content="Rock, Paper, Scissors, Stone, Papyrus, Knives, Pebble, Cardboard, Daggers, Boulder, Toilet Paper, Swords">
 
     <!-- Favicon things go here-->
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/pictures/favicon-32x32.png">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
 
     <!--fontawesome stuff & css style link here-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -30,9 +30,9 @@
         <h1 class="page-heading">Rock, Paper and Scissors!</h1>
         <h2 class="game-text" id="player-text">Player:</h2>
         <div class="button-box">
-            <button class="choice-buttons">ROCK</button>
-            <button class="choice-buttons">PAPER</button>
-            <button class="choice-buttons">SCISSORS</button>
+            <button aria-label="Rock button" class="choice-buttons">ROCK</button>
+            <button aria-label="Paper button" class="choice-buttons">PAPER</button>
+            <button aria-label="Scissors button"  class="choice-buttons">SCISSORS</button>
         </div>
 
         <h2 class="game-text" id="result-text">Result:</h2>
@@ -42,9 +42,9 @@
 
         <p class="scores" id = "player-score">Player Score:<span id="player-result">0</span></p>
         <p class="scores" id = "computer-score">Computer Score:<span id="computer-result">0</span></p>
-        <p id="total-games" >0</p>
+        <p id="total-games" hidden>0</p>
         <p id="games-won" hidden>0</p>
-        <button id="reset-button">Restart</button>
+        <button aria-label="reset button" id="reset-button">Restart</button>
     </div>
     <script src="assets/javascript/javascript.js"></script>
 </body>

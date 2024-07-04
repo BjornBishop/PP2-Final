@@ -114,6 +114,5 @@ function terminateGame () {
     document.querySelector("#computer-result").innerText = Number("0");
     document.querySelector("#player-result").innerText = Number("0");
     document.querySelector("#percentage").innerText = Number("0");
-
-    terminate = true;
+    
 }
